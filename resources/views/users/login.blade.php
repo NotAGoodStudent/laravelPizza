@@ -95,6 +95,15 @@
     {{session('failed')}}
 @endif
 
+<?php
+
+    $cameFromController = session('cameFromController');
+    if($cameFromController)
+    {
+        echo '<script>window.alert("Wrong credentials") </script>';
+    }
+?>
+
 <form action="/getUser" method="get">
     @csrf
     <h1>Login</h1>

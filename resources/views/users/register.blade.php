@@ -10,9 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 </head>
 <body>
-@if(session('success'))
-    {{session('success')}}
-@endif
+<?php
+    $currentUser = session('user');
+    if(!(empty($currentUser)))
+    {
+        echo '<script>window.alert("login successful ROLE: " +"'.$currentUser->role.'") </script>';
+    }
+    ?>
 
 
 </body>
