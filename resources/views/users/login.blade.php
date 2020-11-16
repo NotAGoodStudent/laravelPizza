@@ -89,12 +89,6 @@
     </style>
 </head>
 <body>
-@if(session('success'))
-    {{session('success')}}
-@else
-    {{session('failed')}}
-@endif
-
 <?php
 
     $cameFromController = session('cameFromController');
