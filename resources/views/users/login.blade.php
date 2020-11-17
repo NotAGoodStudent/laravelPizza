@@ -89,14 +89,14 @@
     </style>
 </head>
 <body>
-<?php
+{{--originalment era un if({{$isFromLogin}})--}}
+@if(isset({{$isFromLogin}}))
+    <script>window.alert({{$wrongCred}})</script>
+@endif
 
-    $cameFromController = session('cameFromController');
-    if($cameFromController)
-    {
-        echo '<script>window.alert("Wrong credentials") </script>';
-    }
-?>
+
+
+
 
 <form action="/getUser" method="get">
     @csrf

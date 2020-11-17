@@ -9,8 +9,6 @@ class UserController extends Controller
 {
     public function login()
     {
-        session()->forget('user');
-        session()->forget('cameFromController');
         $users = User::all();
         if(count($users)>0)
         {
@@ -21,21 +19,18 @@ class UserController extends Controller
                 {
                     if($u->password == request('password'))
                     {
-                        session(['user' => $u]);
-                        return redirect('/logged');
+                        return view("users.register") -> with('name', $u->name)->with('role', $u->role);
 
                     }
 
 
-                    session(['cameFromController' => true]);
-                    return redirect('/');
+                    return view("users.login")-> with('wrongCred', "wrong credentials introduced")-> with('isFromLogin', true);
 
 
                 }
             }
         }
-        session(['cameFromController' => true]);
-        return redirect('/');
+        return view("users.login")-> with('wrongCred', "wrong credentials introduced")-> with('isFromLogin', true);;
     }
 
 }
