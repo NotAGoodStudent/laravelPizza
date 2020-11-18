@@ -90,12 +90,9 @@
 </head>
 <body>
 {{--originalment era un if({{$isFromLogin}})--}}
-@if(isset({{$isFromLogin}}))
-    <script>window.alert({{$wrongCred}})</script>
+@if($isFromLogin ?? '')
+    <script>window.alert("{{$wrongCred}}")</script>
 @endif
-
-
-
 
 
 <form action="/getUser" method="get">

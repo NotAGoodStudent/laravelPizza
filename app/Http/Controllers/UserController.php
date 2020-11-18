@@ -19,18 +19,12 @@ class UserController extends Controller
                 {
                     if($u->password == request('password'))
                     {
-                        return view("users.register") -> with('name', $u->name)->with('role', $u->role);
-
+                        return view("users.register")->with('name', $u->name)->with('role', $u->role);
                     }
-
-
                     return view("users.login")-> with('wrongCred', "wrong credentials introduced")-> with('isFromLogin', true);
-
-
                 }
             }
         }
         return view("users.login")-> with('wrongCred', "wrong credentials introduced")-> with('isFromLogin', true);;
     }
-
 }
