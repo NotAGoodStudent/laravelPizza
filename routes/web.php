@@ -15,9 +15,13 @@ Route::get('/', function ()
 {
     return view('users.login');
 });
-
+Route::get('/register', function ()
+{
+    return view('users.register');
+});
+Route::get('/addUser', 'UserController@addUser');
 Route::get('/getUser', 'UserController@login');
 Route::get('/logged',function ()
 {
-    return view('users.register');
+    return view('users.menu');
 });

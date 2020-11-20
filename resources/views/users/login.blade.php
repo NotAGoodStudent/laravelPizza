@@ -99,8 +99,8 @@
     @csrf
     <h1>Login</h1>
     <div class="content2">
-        <label for="email">E-mail: </label>
-        <input class="inputs" type="text" id="email" name="email" required>
+        <label for="email">Username: </label>
+        <input class="inputs" type="text" id="username" name="username" required>
         <label for="password">Password: </label>
         <input class="inputs" type="password" id="password" name="password">
         <input type="submit" value="login" name="login" id="login">
