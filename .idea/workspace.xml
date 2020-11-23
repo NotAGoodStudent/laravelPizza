@@ -19,13 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="">
+    <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="commit login!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +191,9 @@
       <workItem from="1605601743318" duration="10445000" />
       <workItem from="1605687458690" duration="6951000" />
       <workItem from="1605773109601" duration="4564000" />
-      <workItem from="1605859661563" duration="10794000" />
+      <workItem from="1605859661563" duration="11883000" />
+      <workItem from="1605885722382" duration="327000" />
+      <workItem from="1606119830526" duration="5343000" />
     </task>
     <servers />
   </component>
@@ -209,6 +210,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit login!" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit login!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605601479865">
@@ -223,9 +229,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605612314349" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605873194354">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605873194354" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605612118894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605612118894" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/users/login.blade.php</url>
+          <line>98</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

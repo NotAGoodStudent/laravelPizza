@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Register</title>
 </head>
 <body>
 
@@ -24,5 +24,21 @@
         <button type="submit" id="add" name="add">+</button>
     </div>
 </form>
+<hr>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+@foreach($users as $u)
+    <tr>
+        <th>{{$u->usersID}}</th>
+        <th>{{$u->username}}</th>
+        <th>{{$u->email}}</th>
+    </tr>
+@endforeach
+</table>
+
 </body>
 </html>

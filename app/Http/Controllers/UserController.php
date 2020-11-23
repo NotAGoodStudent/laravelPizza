@@ -45,7 +45,7 @@ class UserController extends Controller
         {
             $u = $this->addUserData(request('email'), request('username'), request('name'), request('surname'), request('password'), 'Client');
             $u->save();
-            return view('users.register');
+            return view('users.register', $users);
         }
     }
 
@@ -61,5 +61,11 @@ class UserController extends Controller
         $u->creationDate = date('Y/m/d');
         return $u;
 
+    }
+
+    public function getAllUsers()
+    {
+        $users = User::all();
+        return view('users.register')->with('users', $users);
     }
 }

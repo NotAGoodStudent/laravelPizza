@@ -93,8 +93,8 @@
 @if($isFromLogin ?? '')
     <script>window.alert("{{$wrongCred}}")</script>
 @endif
-
-
+{{--
+commit login--}}
 <form action="/getUser" method="get">
     @csrf
     <h1>Login</h1>

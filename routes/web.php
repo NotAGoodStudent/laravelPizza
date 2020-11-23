@@ -20,6 +20,7 @@ Route::get('/register', function ()
     return view('users.register');
 });
 Route::get('/addUser', 'UserController@addUser');
+Route::get('/registerUser', 'UserController@getAllUsers');
 Route::get('/getUser', 'UserController@login');
 Route::get('/logged',function ()
 {
