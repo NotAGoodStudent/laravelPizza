@@ -54,8 +54,7 @@ nav
 
 .nav-link li:hover
 {
-    animation: pulse 1s infinite;
-    animation-timing-function: linear;
+    text-decoration: underline white;
 }
 
 
@@ -65,11 +64,7 @@ nav
     color: white;
 }
 
-.logo:hover
-{
-    animation: pulse 1s infinite;
-    animation-timing-function: linear;
-}
+
 
 .logo
 {
@@ -168,12 +163,11 @@ nav
 
 footer
 {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background: transparent;
     min-height: 6vh;
-
 }
 
 footer p
@@ -203,7 +197,7 @@ footer p
 
 .fa:hover
 {
-    transform: scale(2);
+    transform: scale(1.5);
     transition: all ease 500ms;
 }
 

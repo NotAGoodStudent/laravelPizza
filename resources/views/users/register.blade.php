@@ -7,6 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/styleRegister.css') }}">
     <title>Register</title>
 </head>
 <body>
@@ -15,18 +16,35 @@
     <script>window.alert("Something went wrong...")</script>
 @endif
 
-<form action="/addUser">
-    <input type="text" id="email" name="email" placeholder="Email: ">
-    <input type="text" id="username" name="username" placeholder="Username: ">
-    <input type="text" id="name" name="name" placeholder="Name: ">
-    <input type="text" id="surname" name="surname" placeholder="Surname: ">
-    <input type="password" id="password" name="password" placeholder="Password: ">
-    <input type="password" id="password2" name="password2" placeholder="Password: ">
-    <div class="add">
-        <button type="submit" id="add" name="add">+</button>
-    </div>
-</form>
+<div class="wrapper">
+    <form action="#" method="post">
+        <div class="title">
+            <h1>register</h1>
+        </div>
+        <div class="contact-form">
+            <div class="input-fields">
+                <input type="text" class="input" placeholder="Username" id="username" name="username">
+                <input type="text" class="input" placeholder="Name" id="name" name="name">
+                <input type="text" class="input" placeholder="Surname" id="surname" name="surname">
+                <input type="text" class="input" placeholder="Email Address" id="email" name="email">
+                <input type="password" class="input" placeholder="Password(6-14 characters)" id="password" name="password">
+                <input type="password" class="input" placeholder="Password(6-14 characters)" id="password2" name="password2">
+            </div>
+            </div>
+            <div class="btn">
+                <button type="submit" class="btn1" id="register" name="register">+</button>
+            </div>
+    </form>
+</div>
 <hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="tableWrapper">
 <table>
     <tr>
         <th>ID</th>
@@ -35,13 +53,13 @@
     </tr>
 @foreach($users as $u)
     <tr>
-        <th>{{$u->usersID}}</th>
-        <th>{{$u->username}}</th>
-        <th>{{$u->email}}</th>
+        <td>{{$u->usersID}}</td>
+        <td>{{$u->username}}</td>
+        <td>{{$u->email}}</td>
     </tr>
 @endforeach
 </table>
-
+</div>
 </body>
 </html>
 @endsection

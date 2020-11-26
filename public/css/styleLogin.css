@@ -79,39 +79,9 @@
     text-align: center;
     border: solid black 2px;
     font-size: 15px;
+    transition: all ease 500ms;
 
 }
-.tableWrapper
-{
-    margin-top:30%;
-    left: 38%;
-    position: absolute;
-    padding-bottom: 200px;
-
-
-}
-
-table
-{
-    width: 100%;
-    border-collapse: collapse;
-    display:table-header-group;
-}
-th, td
-{
-    padding: 10px;
-}
-
-td
-{
-    text-align: center;
-}
-
-tr
-{
-    border: black solid 2px;
-}
-
 
 
 .btn1:hover
@@ -120,13 +90,4 @@ tr
     border: solid green 2px;
     color: white;
 }
-
-@media screen and (max-width: 768px)
-{
-    .tableWrapper {
-        margin-top: 120%;
-        left: 5%
-    }
-}
-
 

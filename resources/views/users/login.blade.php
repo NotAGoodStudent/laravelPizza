@@ -10,7 +10,7 @@
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/layout.css">
-    <link rel="stylesheet" href="{{ asset('css/styleRegister.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styleLogin.css') }}">
 </head>
 <body>
 {{--originalment era un if({{$isFromLogin}})--}}
@@ -30,7 +30,7 @@ commit login--}}
                 <input type="password" class="input" placeholder="Password" id="password" name="password">
             </div>
             <div class="btn">
-                <button type="submit" class="btn1" id="register" name="register">register</button>
+                <button type="submit" class="btn1" id="register" name="register">login</button>
             </div>
         </div>
     </form>

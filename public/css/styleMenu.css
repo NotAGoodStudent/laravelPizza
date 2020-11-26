@@ -23,6 +23,7 @@
     letter-spacing: 1.5px;
     margin-left: 40px;
     border: solid black 2px;
+    transition: all ease 500ms;
 }
 
 .but1:hover
