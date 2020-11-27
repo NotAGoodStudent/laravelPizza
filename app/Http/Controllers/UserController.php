@@ -34,7 +34,7 @@ class UserController extends Controller
 
         foreach ($users as $u)
         {
-            if($u->username == request('username') || $u->email == request('enail'))
+            if($u->username == request('username') || $u->email == request('email'))
             {
                 return view('users.register')->with('recordExists', true);
             }
@@ -45,8 +45,11 @@ class UserController extends Controller
         {
             $u = $this->addUserData(request('email'), request('username'), request('name'), request('surname'), request('password'), 'Client');
             $u->save();
-            return view('users.register', $users);
+            $curr = session('currentUser');
+            return $this->getAllUsers();
         }
+
+        return $this->getAllUsers();;
     }
 
     public function addUserData($email, $username, $name, $surname, $password, $role)
@@ -65,7 +68,15 @@ class UserController extends Controller
 
     public function getAllUsers()
     {
+        $curr = session('currentUser');
         $users = User::all();
+        foreach ($users as $key => $u)
+        {
+            if($curr->username == $u->username)
+            {
+                $users->forget($key);
+            }
+        }
         return view('users.register')->with('users', $users);
     }
 }

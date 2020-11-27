@@ -21,6 +21,7 @@ Route::get('/register', function ()
 });
 Route::get('/addUser', 'UserController@addUser');
 Route::get('/registerUser', 'UserController@getAllUsers');
+Route::post('/registered', 'UserController@addUser');
 Route::get('/getUser', 'UserController@login');
 Route::get('/logged',function ()
 {

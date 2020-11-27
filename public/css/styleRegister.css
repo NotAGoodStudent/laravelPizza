@@ -79,6 +79,7 @@
     text-align: center;
     border: solid black 2px;
     font-size: 15px;
+    transition: all ease 500ms;
 
 }
 .tableWrapper

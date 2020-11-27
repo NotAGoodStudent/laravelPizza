@@ -17,7 +17,8 @@
 @endif
 
 <div class="wrapper">
-    <form action="#" method="post">
+    <form action="/registered" method="post">
+        @csrf
         <div class="title">
             <h1>register</h1>
         </div>
@@ -27,8 +28,8 @@
                 <input type="text" class="input" placeholder="Name" id="name" name="name">
                 <input type="text" class="input" placeholder="Surname" id="surname" name="surname">
                 <input type="text" class="input" placeholder="Email Address" id="email" name="email">
-                <input type="password" class="input" placeholder="Password(6-14 characters)" id="password" name="password">
-                <input type="password" class="input" placeholder="Password(6-14 characters)" id="password2" name="password2">
+                <input type="password" class="input" placeholder="Password" id="password" name="password">
+                <input type="password" class="input" placeholder="Re-enter password" id="password2" name="password2">
             </div>
             </div>
             <div class="btn">
