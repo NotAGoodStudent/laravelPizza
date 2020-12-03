@@ -59,20 +59,13 @@ class UserController extends Controller
         {
             $u = $this->addUserData(request('email'), request('username'), request('name'), request('surname'), request('password'), 'Client');
             $u->save();
-            $curr = session('currentUser');
             return 0;
         }
         return 2;
     }
 
     /**
-     * @param $email
-     * @param $username
-     * @param $name
-     * @param $surname
-     * @param $password
-     * @param $role
-     * @return User
+        The variable names given are User class variables, this function takes those fields and creates a new user that will be returned and assigned
      */
     public function addUserData($email, $username, $name, $surname, $password, $role)
     {
