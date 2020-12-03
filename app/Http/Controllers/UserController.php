@@ -45,7 +45,7 @@ class UserController extends Controller
     }
 
     /**
-     *checks if the username and email already exist in the database and it also checks if the passwords wether coincide or not, depending on the condition
+     *checks if the username and email already exist in the database and it also checks whether or not they passwords coincide, depending on the condition
      *that is given will return a number that will be processed in the function addUser
      */
     public function validateCredentials()
