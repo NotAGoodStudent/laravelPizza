@@ -8,7 +8,9 @@ use phpDocumentor\Reflection\Types\True_;
 
 class UserController extends Controller
 {
-    //Recovers all the field from the post and and checks if the credentials coincide with the data in the database
+    /**
+     * Recovers all the field from the post and and checks if the credentials coincide with the data in the database
+     */
     public function login()
     {
         $users = User::all();
@@ -29,11 +31,9 @@ class UserController extends Controller
         }
         return view("users.login")-> with('wrongCred', "wrong credentials introduced")-> with('isFromLogin', true);;
     }
-
-    //calls the function validateCredentials which checks if the username and email already exist in the database and it also check if the passwords coincide, if the first condition
-    //is false and the second's true, a new user is added. If the first condition is true, it returns an error of type Username or Email already exist and doesn't add the user to the database
-    //and last but not least, if the second condition is false, it returns an error of type passwords do not coincide. And the function addUser just filters those cases and returns
-    //the pertinent data to the view.
+    /**
+     * calls the function validateCredentials which checks if the username and email already exist in the database and it also checks if the passwords wether coincide or not
+     */
     public function addUser()
     {
         $added = $this->validateCredentials();
@@ -79,7 +79,9 @@ class UserController extends Controller
         $u->creationDate = date('Y/m/d');
         return $u;
     }
-    //gets all users from the database except the current one
+    /**
+     * gets all users from the database except the current one
+      */
     public function getAllUsers()
     {
         $curr = session('currentUser');
@@ -93,8 +95,9 @@ class UserController extends Controller
         }
         return $users;
     }
-
-    //returns the necessary data to load users.register.blade
+    /**
+     * returns the necessary data to load users.register.blade
+     * */
     public function returnRegister()
     {
         $users = $this->getAllUsers();
