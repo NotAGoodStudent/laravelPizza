@@ -31,8 +31,9 @@ class UserController extends Controller
         }
         return view("users.login")-> with('wrongCred', "wrong credentials introduced")-> with('isFromLogin', true);;
     }
+
     /**
-     * calls the function validateCredentials which checks if the username and email already exist in the database and it also checks if the passwords wether coincide or not
+     * calls the function validateCredentials and depending on what it returns we either return errors or add the users to the database
      */
     public function addUser()
     {
@@ -42,6 +43,11 @@ class UserController extends Controller
         if($added == 1) return view('users.register')->with('users', $users)->with('wrongCred', 'Username or Email in use')->with('recordExists', true);
         if($added == 2) return view('users.register')->with('users', $users)->with('wrongCred', 'Passwords do not coincide')->with('notEqual', true);
     }
+
+    /**
+     *checks if the username and email already exist in the database and it also checks if the passwords wether coincide or not, depending on the condition
+     *that is given will return a number that will be processed in the function addUser
+     */
     public function validateCredentials()
     {
         $users = $this->getAllUsers();
@@ -58,6 +64,7 @@ class UserController extends Controller
         }
         return 2;
     }
+
     /**
      * @param $email
      * @param $username
@@ -79,6 +86,7 @@ class UserController extends Controller
         $u->creationDate = date('Y/m/d');
         return $u;
     }
+
     /**
      * gets all users from the database except the current one
       */
@@ -95,6 +103,7 @@ class UserController extends Controller
         }
         return $users;
     }
+
     /**
      * returns the necessary data to load users.register.blade
      * */
