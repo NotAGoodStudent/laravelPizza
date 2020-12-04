@@ -67,6 +67,15 @@ class UserController extends Controller
     /**
         The variable names given are User class variables, this function takes those fields and creates a new user that will be returned and assigned
      */
+    /**
+     * @param $email //contains an email that we get from the form input
+     * @param $username //contains a username that we get from the form input
+     * @param $name //contains a name that we get from the form input
+     * @param $surname //contains a surname that we get from the form input
+     * @param $password //contains a password that we get from the form input
+     * @param $role //gets the role that we automatically assigned, by default is 'user'
+     * @return User // We return a User object that will be created with the parameters mentioned above and a creationDate variable that will contain today's date
+     */
     public function addUserData($email, $username, $name, $surname, $password, $role)
     {
         $u = new User();
