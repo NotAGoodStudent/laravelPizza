@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-<link rel="stylesheet" href="{{ asset('css/styleRegister.css') }}">
+<link rel="stylesheet" href="{{ asset('css/styleRegister.min.css') }}">
 <title>Register</title>
 @section('content')
 <body>
@@ -9,7 +9,10 @@
 @if($recordExists ?? '')
     <script>window.alert("{{$wrongCred}}")</script>
 @endif
--@if($notEqual ?? '')
+@if($notEqual ?? '')
+    <script>window.alert("{{$wrongCred}}")</script>
+@endif
+@if($roleNull ?? '')
     <script>window.alert("{{$wrongCred}}")</script>
 @endif
 <div class="wrapper">
@@ -24,6 +27,13 @@
                 <input type="text" class="input" placeholder="Name" id="name" name="name">
                 <input type="text" class="input" placeholder="Surname" id="surname" name="surname">
                 <input type="text" class="input" placeholder="Email Address" id="email" name="email">
+                <select class = 'roleSelector' name="role" id="role">
+                    <option>Pick a role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="PizzaMaker">PizzaMaker</option>
+                    <option value="Delivery">Delivery</option>
+                    <option value="Client">Client</option>
+                </select>
                 <input type="password" class="input" placeholder="Password" id="password" name="password">
                 <input type="password" class="input" placeholder="Re-enter password" id="password2" name="password2">
             </div>

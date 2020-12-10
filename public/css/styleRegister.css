@@ -111,7 +111,25 @@ tr
     border: black solid 2px;
 }
 
+.roleSelector
+{
+    margin-top: 5%;
+    width: 100%;
+    background: white;
+    border: 2px solid #8B0000;
+    color: black;
+    padding: 10px;
+}
 
+option
+{
+    background-color: white;
+}
+
+option:checked {
+    background-color: #8B0000;
+    color: white;
+}
 
 .btn1:hover
 {

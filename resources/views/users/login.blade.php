@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 <title>Login</title>
-<link rel="stylesheet" href="{{ asset('css/styleLogin.css') }}">
+<link rel="stylesheet" href="{{ asset('css/styleLogin.min.css') }}">
 @section('content')
 <body>
 {{--originalment era un if({{$isFromLogin}})--}}

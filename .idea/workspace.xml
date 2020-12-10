@@ -25,6 +25,11 @@
     <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="commit login!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/styleRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styleRegister.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yuicompressor-2.4.8.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -207,7 +212,14 @@
       <workItem from="1606725637762" duration="8999000" />
       <workItem from="1606897309000" duration="1447000" />
       <workItem from="1606985488991" duration="7363000" />
-      <workItem from="1607070466907" duration="1114000" />
+      <workItem from="1607070466907" duration="1890000" />
+      <workItem from="1607169006748" duration="25000" />
+      <workItem from="1607503580508" duration="5358000" />
+      <workItem from="1607537505709" duration="474000" />
+      <workItem from="1607542768770" duration="14000" />
+      <workItem from="1607594694708" duration="277000" />
+      <workItem from="1607594976236" duration="2314000" />
+      <workItem from="1607597352623" duration="2262000" />
     </task>
     <servers />
   </component>
@@ -231,22 +243,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit login!" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1036" y="242" key="EditFileWatcherDialog" timestamp="1606992925926">
+    <state x="1036" y="242" width="717" height="479" key="EditFileWatcherDialog" timestamp="1607597605863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1036" y="242" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606992925926" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605601479865">
+    <state x="1036" y="242" width="717" height="479" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607597605863" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607596166991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605601479865" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607596166991" />
     <state x="751" y="243" key="NewPhpClassDialog" timestamp="1605870869596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="751" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605870869595" />
-    <state x="868" y="109" key="SettingsEditor" timestamp="1606992926705">
+    <state x="868" y="109" key="SettingsEditor" timestamp="1607597608889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="868" y="109" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606992926705" />
+    <state x="868" y="109" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607597608889" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605873194354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

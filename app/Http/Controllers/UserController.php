@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\True_;
+use function PHPUnit\Framework\isNull;
 
 class UserController extends Controller
 {
@@ -42,10 +43,11 @@ class UserController extends Controller
         if($added == 0) return view('users.register')->with('users', $users)->with('rightCred', 'User added successfully')->with('added', true);
         if($added == 1) return view('users.register')->with('users', $users)->with('wrongCred', 'Username or Email in use')->with('recordExists', true);
         if($added == 2) return view('users.register')->with('users', $users)->with('wrongCred', 'Passwords do not coincide')->with('notEqual', true);
+        if($added == 3) return view('users.register')->with('users', $users)->with('wrongCred', 'Role cannot be null')->with('roleNull', true);
     }
 
     /**
-     *checks if the username and email already exist in the database and it also checks whether or not they passwords coincide, depending on the condition
+     *checks if the username and email already exist in the database, if the role has no value and it also checks whether or not they passwords coincide, depending on the condition
      *that is given will return a number that will be processed in the function addUser
      */
     public function validateCredentials()
@@ -55,13 +57,16 @@ class UserController extends Controller
         {
             if($u->username == request('username') || $u->email == request('email')) return 1;
         }
-        if(request('password') == request('password2'))
+        if(!isNull(request('role')))
         {
-            $u = $this->addUserData(request('email'), request('username'), request('name'), request('surname'), request('password'), 'Client');
-            $u->save();
-            return 0;
+            if (request('password') == request('password2')) {
+                $u = $this->addUserData(request('email'), request('username'), request('name'), request('surname'), request('password'), request('role'));
+                $u->save();
+                return 0;
+            }
+            return 2;
         }
-        return 2;
+        return 3;
     }
 
     /**

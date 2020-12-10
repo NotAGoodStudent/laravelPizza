@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 <title>Menu</title>
-<link rel="stylesheet" href="{{ asset('css/styleMenu.css') }}">
+<link rel="stylesheet" href="{{ asset('css/styleMenu.min.css') }}">
 @section('content')
 <body>
 <div class="userInfoDiv">
