@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use mysql_xdevapi\Table;
 use phpDocumentor\Reflection\Types\True_;
 use function PHPUnit\Framework\isNull;
 
@@ -39,11 +40,11 @@ class UserController extends Controller
     public function addUser()
     {
         $added = $this->validateCredentials();
-        $users = $this->getAllUsers();
+        $users = $this->getAllUsersOrdered();
         if($added == 0) return view('users.register')->with('users', $users)->with('rightCred', 'User added successfully')->with('added', true);
         if($added == 1) return view('users.register')->with('users', $users)->with('wrongCred', 'Username or Email in use')->with('recordExists', true);
         if($added == 2) return view('users.register')->with('users', $users)->with('wrongCred', 'Passwords do not coincide')->with('notEqual', true);
-        if($added == 3) return view('users.register')->with('users', $users)->with('wrongCred', 'Role cannot be null')->with('roleNull', true);
+        if($added == 3) return view('users.register')->with('users', $users)->with('wrongCred', 'Some fields are empty')->with('roleNull', true);
     }
 
     /**
@@ -53,18 +54,19 @@ class UserController extends Controller
     public function validateCredentials()
     {
         $users = $this->getAllUsers();
-        foreach ($users as $u)
+        if(request('email') && request('username') && request('name') && request('surname') && request('password') && request('password2') && request('role'))
         {
-            if($u->username == request('username') || $u->email == request('email')) return 1;
-        }
-        if(!isNull(request('role')))
-        {
+            foreach ($users as $u)
+            {
+                if ($u->username == request('username') || $u->email == request('email')) return 1;
+            }
+
             if (request('password') == request('password2')) {
                 $u = $this->addUserData(request('email'), request('username'), request('name'), request('surname'), request('password'), request('role'));
                 $u->save();
                 return 0;
             }
-            return 2;
+                return 2;
         }
         return 3;
     }
@@ -78,7 +80,7 @@ class UserController extends Controller
      * @param $name //contains a name that we get from the form input
      * @param $surname //contains a surname that we get from the form input
      * @param $password //contains a password that we get from the form input
-     * @param $role //gets the role that we automatically assigned, by default is 'user'
+     * @param $role //gets the role that we assigned
      * @return User // We return a User object that will be created with the parameters mentioned above and a creationDate variable that will contain today's date
      */
     public function addUserData($email, $username, $name, $surname, $password, $role)
@@ -101,6 +103,23 @@ class UserController extends Controller
     {
         $curr = session('currentUser');
         $users = User::all();
+        foreach ($users as $key => $u)
+        {
+            if($curr->username == $u->username)
+            {
+                $users->forget($key);
+            }
+        }
+        return $users;
+    }
+
+    /**
+     * gets all the users from the table and sorts them by their surname
+     */
+    public function getAllUsersOrdered()
+    {
+        $curr = session('currentUser');
+        $users = User::orderBy('surname')->get();
         foreach ($users as $key => $u)
         {
             if($curr->username == $u->username)

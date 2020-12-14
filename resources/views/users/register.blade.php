@@ -28,7 +28,7 @@
                 <input type="text" class="input" placeholder="Surname" id="surname" name="surname">
                 <input type="text" class="input" placeholder="Email Address" id="email" name="email">
                 <select class = 'roleSelector' name="role" id="role">
-                    <option>Pick a role</option>
+                    <option value="">Pick a role</option>
                     <option value="Admin">Admin</option>
                     <option value="PizzaMaker">PizzaMaker</option>
                     <option value="Delivery">Delivery</option>
@@ -47,23 +47,21 @@
 <div class="tableWrapper">
     <table>
         <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
             <th>Name</th>
             <th>Surname</th>
-            <th>CreationDate</th>
+            <th>Email</th>
             <th>Role</th>
+            <th>Username</th>
+            <th>CreationDate</th>
         </tr>
         @foreach($users as $u)
             <tr>
-                <td>{{$u->usersID}}</td>
-                <td>{{$u->username}}</td>
-                <td>{{$u->email}}</td>
                 <td>{{$u->name}}</td>
                 <td>{{$u->surname}}</td>
-                <td>{{$u->creationDate}}</td>
+                <td>{{$u->email}}</td>
                 <td>{{$u->role}}</td>
+                <td>{{$u->username}}</td>
+                <td>{{$u->creationDate}}</td>
             </tr>
         @endforeach
     </table>
