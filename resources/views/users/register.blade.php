@@ -19,7 +19,7 @@
     <form action="/registered" method="post">
         @csrf
         <div class="title">
-            <h1>register</h1>
+            <h1>User Register</h1>
         </div>
         <div class="contact-form">
             <div class="input-fields">

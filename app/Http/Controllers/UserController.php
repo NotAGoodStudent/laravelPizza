@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use Illuminate\Http\Request;
-use mysql_xdevapi\Table;
-use phpDocumentor\Reflection\Types\True_;
-use function PHPUnit\Framework\isNull;
+use http\Env\Request;
 
 class UserController extends Controller
 {
@@ -40,7 +37,7 @@ class UserController extends Controller
     public function addUser()
     {
         $added = $this->validateCredentials();
-        $users = $this->getAllUsersOrdered();
+        $users = $this->getAllUsers(true);
         if($added == 0) return view('users.register')->with('users', $users)->with('rightCred', 'User added successfully')->with('added', true);
         if($added == 1) return view('users.register')->with('users', $users)->with('wrongCred', 'Username or Email in use')->with('recordExists', true);
         if($added == 2) return view('users.register')->with('users', $users)->with('wrongCred', 'Passwords do not coincide')->with('notEqual', true);
@@ -53,7 +50,7 @@ class UserController extends Controller
      */
     public function validateCredentials()
     {
-        $users = $this->getAllUsers();
+        $users = $this->getAllUsers(false);
         if(request('email') && request('username') && request('name') && request('surname') && request('password') && request('password2') && request('role'))
         {
             foreach ($users as $u)
@@ -92,42 +89,38 @@ class UserController extends Controller
         $u->surname = $surname;
         $u->password = $password;
         $u->role = $role;
-        $u->creationDate = date('Y/m/d');
+        $u->creationDate = date("Y/m/d H:i:s", strtotime('1 hour')); ;
         return $u;
     }
 
     /**
-     * gets all users from the database except the current one
+     * gets all users from the database except the current one i the passed value is true, it'll order the records by surname from A-Z
       */
-    public function getAllUsers()
+    public function getAllUsers($order)
     {
         $curr = session('currentUser');
-        $users = User::all();
-        foreach ($users as $key => $u)
+        if(!$order)
         {
-            if($curr->username == $u->username)
-            {
-                $users->forget($key);
+            $users = User::all();
+            foreach ($users as $key => $u) {
+                if ($curr->username == $u->username) {
+                    $users->forget($key);
+                }
             }
+            return $users;
         }
-        return $users;
-    }
-
-    /**
-     * gets all the users from the table and sorts them by their surname
-     */
-    public function getAllUsersOrdered()
-    {
-        $curr = session('currentUser');
-        $users = User::orderBy('surname')->get();
-        foreach ($users as $key => $u)
-        {
-            if($curr->username == $u->username)
+        else
             {
-                $users->forget($key);
+                $users = User::orderBy('surname')->get();
+                foreach ($users as $key => $u)
+                {
+                    if($curr->username == $u->username)
+                    {
+                        $users->forget($key);
+                    }
+                }
+                return $users;
             }
-        }
-        return $users;
     }
 
     /**
@@ -135,7 +128,7 @@ class UserController extends Controller
      * */
     public function returnRegister()
     {
-        $users = $this->getAllUsers();
+        $users = $this->getAllUsers(true);
         return view('users.register')->with('users', $users);
     }
 }
