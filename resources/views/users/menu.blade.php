@@ -8,7 +8,7 @@
 </div>
 <div class="buttons">
     <button class="but1" onclick="window.location.href='/registerUser'">Users</button>
-    <button class="but2" onclick="window.location.href='#'">Continue</button>
+    <button class="but2" onclick="window.location.href='/createPizza'">Pizzas</button>
 </div>
 </body>
 @endsection

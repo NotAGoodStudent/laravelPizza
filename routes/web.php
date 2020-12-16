@@ -11,6 +11,10 @@
 |
 */
 
+/**
+ * User reelated routes
+ */
+
 Route::get('/', function ()
 {
     return view('users.login');
@@ -27,3 +31,9 @@ Route::get('/logged',function ()
 {
     return view('users.menu');
 });
+
+/**
+ * Pizza related routes
+ */
+
+Route::get('/createPizza', 'PizzaController@returnCreatePizza');

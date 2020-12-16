@@ -42,6 +42,11 @@
             <button type="submit" class="btn1" id="register" name="register">+</button>
         </div>
     </form>
+    @error('username') {{$message}} @enderror
+    @error('name') {{$message}} @enderror
+    @error('surname') {{$message}} @enderror
+    @error('email') {{$message}} @enderror
+    @error('role') {{$message}} @enderror
 </div>
 <hr>
 <div class="tableWrapper">

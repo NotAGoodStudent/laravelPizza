@@ -50,11 +50,20 @@ class UserController extends Controller
      */
     public function validateCredentials()
     {
-        $users = $this->getAllUsers(false);
-        if(request('email') && request('username') && request('name') && request('surname') && request('password') && request('password2') && request('role'))
-        {
-            foreach ($users as $u)
-            {
+
+        $validated = request()->validate([
+            'email'=> 'required|min:5',
+            'username'=> 'required|min:3',
+            'name' => 'required|min:2',
+            'surname' => 'required|min:3',
+            'password' => 'required|min:3',
+            'password2' => 'required|min:3',
+            'role' => 'required'
+        ]);
+        if($validated) {
+            $users = $this->getAllUsers(false);
+
+            foreach ($users as $u) {
                 if ($u->username == request('username') || $u->email == request('email')) return 1;
             }
 
@@ -63,7 +72,7 @@ class UserController extends Controller
                 $u->save();
                 return 0;
             }
-                return 2;
+            return 2;
         }
         return 3;
     }
