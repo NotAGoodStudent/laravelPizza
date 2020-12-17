@@ -12,14 +12,14 @@
             <div class="contact-form">
                 <div class="input-fields">
                     <input type="text" class="input" placeholder="Pizza type" id="type" name="type">
-                    <select class = 'roleSelector' name="curst" id="crust">
+                    <select class = 'roleSelector' name="crust" id="crust">
                         <option value="">Pick a crust type</option>
                         <option value="Thin">Thin crust</option>
                         <option value="Thick">Thick crust</option>
                         <option value="Focaccia">Focaccia crust</option>
                         <option value="Filled">Cheese filled crust</option>
                     </select>
-                    <input type="number" class="input" placeholder="Price" id="price" name="price">
+                    <input type="text" class="input" placeholder="Price" id="price" name="price">
                 </div>
             </div>
             <div class="btn">

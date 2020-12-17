@@ -37,3 +37,4 @@ Route::get('/logged',function ()
  */
 
 Route::get('/createPizza', 'PizzaController@returnCreatePizza');
+Route::post('/created', 'PizzaController@addPizza');

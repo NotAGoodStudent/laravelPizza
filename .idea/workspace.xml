@@ -23,13 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="commit login!">
-      <change afterPath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_20_105402_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_20_105402_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Pizza.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pizza.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +226,9 @@
       <workItem from="1608044135891" duration="152000" />
       <workItem from="1608045956930" duration="3670000" />
       <workItem from="1608057147688" duration="1709000" />
-      <workItem from="1608109374524" duration="7980000" />
+      <workItem from="1608109374524" duration="8578000" />
+      <workItem from="1608142403346" duration="602000" />
+      <workItem from="1608197055726" duration="3308000" />
     </task>
     <servers />
   </component>

@@ -98,7 +98,7 @@ class UserController extends Controller
         $u->surname = $surname;
         $u->password = $password;
         $u->role = $role;
-        $u->creationDate = date("Y/m/d H:i:s", strtotime('1 hour')); ;
+        $u->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
         return $u;
     }
 
