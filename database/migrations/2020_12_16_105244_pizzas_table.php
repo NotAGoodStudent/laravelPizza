@@ -16,6 +16,9 @@ class PizzasTable extends Migration
         Schema::create('pizzas', function (Blueprint $table) {
             $table->bigIncrements('pizzaID');
             $table->string('type');
+            $table->string('Ing1')->nullable();;
+            $table->string('Ing2')->nullable();;
+            $table->string('Ing3')->nullable();;
             $table->string('crust')->nullable();
             $table->float('price')->nullable();
             $table->timestamp('creationDate');

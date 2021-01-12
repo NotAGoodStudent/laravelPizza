@@ -118,18 +118,15 @@ class UserController extends Controller
             }
             return $users;
         }
-        else
+        $users = User::orderBy('surname')->get();
+        foreach ($users as $key => $u)
+        {
+            if($curr->username == $u->username)
             {
-                $users = User::orderBy('surname')->get();
-                foreach ($users as $key => $u)
-                {
-                    if($curr->username == $u->username)
-                    {
-                        $users->forget($key);
-                    }
-                }
-                return $users;
+                $users->forget($key);
             }
+        }
+        return $users;
     }
 
     /**

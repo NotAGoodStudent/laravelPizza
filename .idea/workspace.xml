@@ -26,9 +26,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Pizza.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Pizza.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_16_105244_pizzas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_105244_pizzas_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,14 +167,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuari\Desktop\pizzaProject\public" />
+      <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\views\users" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuari\Desktop\pizzaProject\public\css" />
       <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\js" />
       <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Usuari\Desktop\pizzaProject\public" />
-      <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\views\users" />
     </key>
   </component>
   <component name="RunManager">
@@ -228,7 +227,12 @@
       <workItem from="1608057147688" duration="1709000" />
       <workItem from="1608109374524" duration="8578000" />
       <workItem from="1608142403346" duration="602000" />
-      <workItem from="1608197055726" duration="3308000" />
+      <workItem from="1608197055726" duration="3906000" />
+      <workItem from="1608213983551" duration="563000" />
+      <workItem from="1608282759001" duration="1610000" />
+      <workItem from="1608311309406" duration="28000" />
+      <workItem from="1610356951520" duration="2382000" />
+      <workItem from="1610440621488" duration="4578000" />
     </task>
     <servers />
   </component>
