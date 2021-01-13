@@ -24,9 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="commit login!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_16_105244_pizzas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_105244_pizzas_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,7 +229,9 @@
       <workItem from="1608282759001" duration="1610000" />
       <workItem from="1608311309406" duration="28000" />
       <workItem from="1610356951520" duration="2382000" />
-      <workItem from="1610440621488" duration="4578000" />
+      <workItem from="1610440621488" duration="5178000" />
+      <workItem from="1610485279206" duration="11000" />
+      <workItem from="1610541048103" duration="137000" />
     </task>
     <servers />
   </component>

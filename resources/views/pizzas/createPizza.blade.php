@@ -55,6 +55,9 @@
                 <th>Type</th>
                 <th>Crust</th>
                 <th>Price</th>
+                <th>Ing1</th>
+                <th>Ing2</th>
+                <th>Ing3</th>
                 <th>CreationDate</th>
             </tr>
             @foreach($pizzas as $p)
@@ -62,6 +65,9 @@
                     <td>{{$p->type}}</td>
                     <td>{{$p->crust}}</td>
                     <td>{{$p->price}}€</td>
+                    <td>{{$p->Ing1}}</td>
+                    <td>{{$p->Ing2}}</td>
+                    <td>{{$p->Ing3}}</td>
                     <td>{{$p->creationDate}}</td>
                 </tr>
             @endforeach
