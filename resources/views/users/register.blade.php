@@ -1,6 +1,34 @@
 @extends('layouts.layout')
 <link rel="stylesheet" href="{{ asset('css/styleRegister.min.css') }}">
-<title>Register</title>
+<title>Register User
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</title>
 @section('content')
 <body>
 @if($added ?? '')

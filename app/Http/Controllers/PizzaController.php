@@ -26,7 +26,7 @@ class PizzaController extends Controller
         ]);
         if($validate)
         {*/
-            $p = $this->addPizzaData(request('type'),request('ing1'), request('ing2'), request('ing3'), request('crust'), request('price'));
+            $p = $this->addPizzaData(request('type'),request('ingredients'), request('crust'), request('price'));
             $p->save();
             return 0;
   /*      }
@@ -34,13 +34,14 @@ class PizzaController extends Controller
 
     }
 
-    public function addPizzaData($type, $ing1, $ing2, $ing3, $crust, $price)
+    public function addPizzaData($type, $ingredients, $crust, $price)
     {
+        $ingrarr = explode(',', $ingredients);
         $pizza = new Pizza();
         $pizza->type = $type;
-        $pizza->ing1 = $ing1;
-        $pizza->ing2 = $ing2;
-        $pizza->ing3 = $ing3;
+        $pizza->ing1 = $ingrarr[0];
+        $pizza->ing2 = $ingrarr[1];
+        $pizza->ing3 = $ingrarr[2];
         $pizza->crust = $crust;
         $pizza->price = $price;
         $pizza->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
