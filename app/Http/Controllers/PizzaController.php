@@ -75,4 +75,5 @@ class PizzaController extends Controller
         $pizzas = $this->getAllPizzas(true);
         return view('pizzas.createPizza')->with('pizzas', $pizzas);
     }
+
 }

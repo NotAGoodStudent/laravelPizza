@@ -31,6 +31,7 @@ Route::get('/logged',function ()
 {
     return view('users.menu');
 });
+Route::get('/orderPizza', 'UserController@returnOrderPizza');
 
 /**
  * Pizza related routes

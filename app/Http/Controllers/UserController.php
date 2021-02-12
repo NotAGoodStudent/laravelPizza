@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Pizza;
 use http\Env\Request;
 
 class UserController extends Controller
@@ -136,5 +137,12 @@ class UserController extends Controller
     {
         $users = $this->getAllUsers(true);
         return view('users.register')->with('users', $users);
+    }
+
+    public function returnOrderPizza()
+    {
+        $pizzaCont = new PizzaController();
+        $pizzas = $pizzaCont->getAllPizzas(true);
+        return view('users.order')->with('pizzas', $pizzas);
     }
 }

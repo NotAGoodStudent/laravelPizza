@@ -23,11 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="commit login!">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pizzaProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pizzaProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PizzaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_16_105244_pizzas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_105244_pizzas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pizzas/createPizza.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/styleOrderPizza.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styleOrderPizza.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +149,9 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-console-color" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k8cO6Xsuoy6MvzGVvSZ2kWpIiQ" />
@@ -155,7 +163,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yuicompressor-2.4.8.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -167,14 +175,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Usuari\Desktop\pizzaProject\public" />
-      <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\views\users" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\steph\Escritorio\laravelPizza" />
       <recent name="C:\Users\Usuari\Desktop\pizzaProject\public\css" />
       <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\js" />
       <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuari\Desktop\pizzaProject\public" />
+      <recent name="C:\Users\Usuari\Desktop\pizzaProject\resources\views\users" />
     </key>
   </component>
   <component name="RunManager">
@@ -236,6 +245,9 @@
       <workItem from="1610485279206" duration="11000" />
       <workItem from="1610541048103" duration="283000" />
       <workItem from="1610614716607" duration="4961000" />
+      <workItem from="1613036269064" duration="3477000" />
+      <workItem from="1613040241214" duration="1857000" />
+      <workItem from="1613117770146" duration="10233000" />
     </task>
     <servers />
   </component>
@@ -259,6 +271,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit login!" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613039163259">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1613039163259" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608117637657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
