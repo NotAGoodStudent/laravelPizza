@@ -145,4 +145,17 @@ class UserController extends Controller
         $pizzas = $pizzaCont->getAllPizzas(true);
         return view('users.order')->with('pizzas', $pizzas);
     }
+
+    public function savePizzasForConfirmationView()
+    {
+        $pizzaCont = new PizzaController();
+        $pizzas = $pizzaCont->getAllPizzas(true);
+        $arr = array();
+    }
+
+    public function logout()
+    {
+        session('currentUser')->flush();
+        return view('users.login');
+    }
 }

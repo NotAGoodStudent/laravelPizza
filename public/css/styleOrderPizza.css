@@ -19,6 +19,10 @@
     border-radius: 5px;
 }
 
+section
+{
+    margin-right: 2%;
+}
 .product-image img
 {
     width: 500px;

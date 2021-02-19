@@ -32,6 +32,8 @@ Route::get('/logged',function ()
     return view('users.menu');
 });
 Route::get('/orderPizza', 'UserController@returnOrderPizza');
+Route::get('/confirmation', 'UserController@savePizzasForConfirmationView');
+Route::get('/logout', 'UserController@logout');
 
 /**
  * Pizza related routes

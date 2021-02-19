@@ -18,7 +18,11 @@
         <ul class="nav-link" id="navul">
             <li> <a href="#" class="link">Undef</a></li>
             <li> <a href="#" class="link">Undef2</a></li>
-            <li> <a href="/" class="link">Undef3</a></li>
+            @if(session('currentUser')!= null)
+            <li> <a href="/logout" class="link">Logout</a></li>
+            @else
+                <li> <a href="#" class="link">Undef3</a></li>
+            @endif
         </ul>
         <div class="burger" onclick="toggleBurger('navul')">
             <div class="line1"></div>
