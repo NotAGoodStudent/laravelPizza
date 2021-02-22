@@ -16,10 +16,10 @@ class BillTable extends Migration
         Schema::create('bills', function (Blueprint $table) {
             $table->bigIncrements('billID');
             $table->integer('userID');
-            $table->integer('quantity')->nullable();
             $table->float('finalPrice')->nullable();
             $table->boolean('paid')->nullable();;
-            $table->timestamp('creationDate');
+            $table->enum('status', ['Pending', 'Preparing', 'In oven', 'Ready'])->nullable();
+            $table->timestamp('creationDate')->nullable();
         });
     }
 

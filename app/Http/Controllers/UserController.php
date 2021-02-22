@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Bill;
+use App\BillLine;
 use App\User;
 use App\Pizza;
 use http\Env\Request;
@@ -146,11 +148,89 @@ class UserController extends Controller
         return view('users.order')->with('pizzas', $pizzas);
     }
 
+
     public function savePizzasForConfirmationView()
     {
         $pizzaCont = new PizzaController();
         $pizzas = $pizzaCont->getAllPizzas(true);
-        $arr = array();
+        $bills = Bill::all();
+        if(count($bills) == 0)
+        {
+
+            $bill = new Bill();
+            $bill->userID = session('currentUser')['usersID'];
+            $bill->finalPrice = 0;
+            $bill->paid = false;
+            $bill->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
+            $bill->save();
+        }
+        else {
+            $rightBill = 0;
+            foreach ($bills as $b) {
+                if (!$b->paid && $b->userID == session('currentUser')['usersID']) {
+                    $rightBill = $b->billID;
+                    break;
+                }
+            }
+
+            if(is_null($rightBill))
+            {
+                $rightB = 0;
+                $bill = new Bill();
+                $bill->userID = session('currentUser')['usersID'];
+                $bill->finalPrice = 0;
+                $bill->paid = false;
+                $bill->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
+                $bill->save();
+                $bills = Bill::all();
+                print count($bills);
+                foreach ($bills as $b) {
+                    if (!$b->paid && $b->userID == session('currentUser')['usersID']) {
+                        $rightB = $b->billID;
+                        break;
+                    }
+                }
+                $billLine = new BillLine();
+                $billLine->billID = $rightB;
+                $billLine->pizzaID = request('submitButton');
+                $billLine->quantity = request('quantity');
+                $billLine->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
+                $billLine->save();
+            }
+            else
+                {
+                    $billLine = new BillLine();
+                    $billLine->billID = $rightBill;
+                    $billLine->pizzaID = request('submitButton');
+                    $billLine->quantity = request('quantity');
+                    $billLine->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
+                    $billLine->save();
+                }
+
+        }
+        return view('users.order')->with('pizzas', $pizzas);
+    }
+
+    public function returnConfirmationView()
+    {
+        $bills = Bill::all();
+        $billLines = BillLine::all();
+        $rightBill = 0;
+        foreach ($bills as $b) {
+            if (!$b->paid && $b->userID == session('currentUser')['usersID']) {
+                $rightBill = $b->billID;
+                break;
+            }
+        }
+         $products = array();
+        foreach ($billLines as $b)
+        {
+            if($b->billID == $rightBill)
+            {
+                array_push($products, $b);
+            }
+        }
+        return view('users.confirm')->with('boughtPizzas', $products);
     }
 
     public function logout()

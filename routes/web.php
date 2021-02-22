@@ -33,6 +33,7 @@ Route::get('/logged',function ()
 });
 Route::get('/orderPizza', 'UserController@returnOrderPizza');
 Route::get('/confirmation', 'UserController@savePizzasForConfirmationView');
+Route::get('/checkout', 'UserController@returnConfirmationView');
 Route::get('/logout', 'UserController@logout');
 
 /**

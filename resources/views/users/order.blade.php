@@ -19,17 +19,21 @@
             <div class="product-buttons">
                 <button class="add" id="add" type="button" onclick="addValue({{$p->pizzaID}})">+</button>
                 <button class="sub" id="sub" type="button" onclick="subValue({{$p->pizzaID}})">-</button>
-                <form action="" method="post">
-                <input class="inputBut" type="number" min="0" id="{{$p->pizzaID}}" max="100" class="sub">
-                    <button name="submitButton" id="{{$p->pizzaID}}">To Cart</button>
+                <form action="/confirmation" method="get">
+                <input class="inputBut" name="quantity" type="number" min="0" id="{{$p->pizzaID}}" max="100" class="sub">
+                    <button name="submitButton" value="{{$p->pizzaID}}">To Cart</button>
                 </form>
             </div>
         </div>
         @endforeach
+
             <div class="clearButtons">
-                <button class="clear" onclick="clearValues()">Clear</button>
+                <form action="/checkout" method="get">
+                <button class="clear" type="button" onclick="clearValues()">Clear</button>
                 <button class="confirm" type="submit">Confirm</button>
+                </form>
             </div>
+
     </section>
     <script>
         function addValue(id)
