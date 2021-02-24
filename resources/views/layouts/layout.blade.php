@@ -19,6 +19,7 @@
             <li> <a href="#" class="link">Undef</a></li>
             <li> <a href="#" class="link">Undef2</a></li>
             @if(session('currentUser')!= null)
+                <li> <a href="/orderPizza" class="link">Order Pizza</a></li>
             <li> <a href="/logout" class="link">Logout</a></li>
             @else
                 <li> <a href="#" class="link">Undef3</a></li>

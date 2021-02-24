@@ -161,6 +161,7 @@ class UserController extends Controller
             $bill->userID = session('currentUser')['usersID'];
             $bill->finalPrice = 0;
             $bill->paid = false;
+            $bill->status = 'Pending';
             $bill->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
             $bill->save();
         }
@@ -173,17 +174,17 @@ class UserController extends Controller
                 }
             }
 
-            if(is_null($rightBill))
+            if($rightBill == 0)
             {
                 $rightB = 0;
                 $bill = new Bill();
                 $bill->userID = session('currentUser')['usersID'];
                 $bill->finalPrice = 0;
                 $bill->paid = false;
+                $bill->status = 'Pending';
                 $bill->creationDate = date("Y/m/d H:i:s", strtotime('1 hour'));
                 $bill->save();
                 $bills = Bill::all();
-                print count($bills);
                 foreach ($bills as $b) {
                     if (!$b->paid && $b->userID == session('currentUser')['usersID']) {
                         $rightB = $b->billID;
@@ -214,6 +215,8 @@ class UserController extends Controller
     public function returnConfirmationView()
     {
         $bills = Bill::all();
+        $pizzaCont = new PizzaController();
+        $pizzas = $pizzaCont->getAllPizzas(true);
         $billLines = BillLine::all();
         $rightBill = 0;
         foreach ($bills as $b) {
@@ -230,12 +233,81 @@ class UserController extends Controller
                 array_push($products, $b);
             }
         }
-        return view('users.confirm')->with('boughtPizzas', $products);
+        return view('users.confirm')->with('boughtPizzas', $products)->with('pizzas', $pizzas);
+    }
+
+    public function cancelBill()
+    {
+        $bills = Bill::all();
+        $billL = BillLine::all();
+        $rightBill = 0;
+        foreach ($bills as $b) {
+            if (!$b->paid && $b->userID == session('currentUser')['usersID']) {
+                $rightBill = $b->billID;
+                $b->delete();
+                break;
+            }
+        }
+        if($rightBill != 0)
+        {
+            foreach ($billL as $bl)
+            {
+                if($bl->billID == $rightBill)
+                {
+                    $bl->delete();
+                }
+            }
+        }
+        $pizzaCont = new PizzaController();
+        $pizzas = $pizzaCont->getAllPizzas(true);
+        return view('users.order')->with('pizzas', $pizzas);
+    }
+
+    public function payBill()
+    {
+        $bills = Bill::all();
+        $billL = BillLine::all();
+        $pizzaCont = new PizzaController();
+        $pizzas = $pizzaCont->getAllPizzas(true);
+        $rightBill = null;
+        foreach ($bills as $b) {
+            if (!$b->paid && $b->userID == session('currentUser')['usersID']) {
+                $rightBill = $b;
+                break;
+            }
+        }
+        if(!is_null($rightBill))
+        {
+            $finalprice = 0;
+            foreach ($billL as $bl)
+            {
+                if($bl->billID == $rightBill->billID)
+                {
+                    foreach ($pizzas as $p)
+                    {
+                        if($p->pizzaID == $bl->pizzaID)
+                        {
+                            $finalprice += $bl->quantity * $p->price;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            $rightBill->paid = true;
+            $rightBill->finalPrice = $finalprice;
+            $rightBill->status = 'Preparing';
+            $rightBill->update();
+        }
+
+        $pizzaCont = new PizzaController();
+        $pizzas = $pizzaCont->getAllPizzas(true);
+        return view('users.order')->with('pizzas', $pizzas);
     }
 
     public function logout()
     {
-        session('currentUser')->flush();
+        session(['currentUser' => null]);
         return view('users.login');
     }
 }

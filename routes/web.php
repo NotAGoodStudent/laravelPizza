@@ -35,6 +35,8 @@ Route::get('/orderPizza', 'UserController@returnOrderPizza');
 Route::get('/confirmation', 'UserController@savePizzasForConfirmationView');
 Route::get('/checkout', 'UserController@returnConfirmationView');
 Route::get('/logout', 'UserController@logout');
+Route::post('/cancelBill', 'UserController@cancelBill');
+Route::post('/payBill', 'UserController@payBill');
 
 /**
  * Pizza related routes

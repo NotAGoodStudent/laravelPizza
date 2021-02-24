@@ -23,12 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="commit login!">
-      <change afterPath="$PROJECT_DIR$/resources/views/users/confirm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/confirmation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bill.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/BillLine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/BillLine.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_15_103658_bill_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_15_103658_bill_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/confirm.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -161,6 +163,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -251,7 +254,9 @@
       <workItem from="1613636839611" duration="5232000" />
       <workItem from="1613725190702" duration="909000" />
       <workItem from="1613730338324" duration="5630000" />
-      <workItem from="1613982158325" duration="9444000" />
+      <workItem from="1613982158325" duration="10517000" />
+      <workItem from="1614068096132" duration="2957000" />
+      <workItem from="1614154695709" duration="6971000" />
     </task>
     <servers />
   </component>
@@ -311,9 +316,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607935873941" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605612118894">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1614158369639">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614158369639" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605612118894" />
   </component>
 </project>
