@@ -2,6 +2,8 @@
 <title>Menu</title>
 <link rel="stylesheet" href="{{ asset('css/confirmation.css') }}">
 @section('content')
+    <div class="main">
+        <h1>Billing</h1>
         @foreach($boughtPizzas as $p)
             @foreach($pizzas as $pi)
                 @if($p->pizzaID == $pi->pizzaID)
@@ -22,4 +24,5 @@
             <button class="confirm"> Confirm</button>
             </form>
         </div>
+    </div>
 @endsection

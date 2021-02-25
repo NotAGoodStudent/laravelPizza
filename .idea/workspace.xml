@@ -23,14 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39486ade-25ad-4369-97fb-378a8db653e5" name="Default Changelist" comment="commit login!">
-      <change afterPath="$PROJECT_DIR$/public/css/confirmation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/BillLine.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/BillLine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/confirmation.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/confirmation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/confirm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +251,8 @@
       <workItem from="1613730338324" duration="5630000" />
       <workItem from="1613982158325" duration="10517000" />
       <workItem from="1614068096132" duration="2957000" />
-      <workItem from="1614154695709" duration="6971000" />
+      <workItem from="1614154695709" duration="7626000" />
+      <workItem from="1614246975982" duration="1909000" />
     </task>
     <servers />
   </component>
